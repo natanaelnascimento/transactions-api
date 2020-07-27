@@ -17,7 +17,6 @@ export default function App() {
     const fetchData = async () => {
       try {
         let response = await transactionsService.findByPeriod(period);
-        setSearch('');
         setPeriodTransactions(response.data);
         setFilteredTransactions(response.data);
       } catch(e) {
@@ -28,6 +27,7 @@ export default function App() {
   }, [period])
 
   const handlePeriodChange = (period) => {
+    setSearch('');
     setPeriod(period);
   }
 
