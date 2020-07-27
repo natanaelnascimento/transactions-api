@@ -16,7 +16,8 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let response = await transactionsService.findByPeriod(period)
+        let response = await transactionsService.findByPeriod(period);
+        setSearch('');
         setPeriodTransactions(response.data);
         setFilteredTransactions(response.data);
       } catch(e) {
