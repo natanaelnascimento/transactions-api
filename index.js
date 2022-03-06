@@ -25,8 +25,8 @@ app.use(express.static(path.join(dirname(), 'client', 'build')));
 /**
  * Rota raiz
  */
-app.get('/api/', (_, response) => {
-  logger.info('/api/');
+app.get('/', (_, response) => {
+  logger.info('/');
   response.send({
     message:
       'Bem-vindo à API de lançamentos. Acesse /transactions e siga as orientações',
@@ -36,7 +36,7 @@ app.get('/api/', (_, response) => {
 /**
  * Rotas principais do app
  */
-app.use('/api/transactions', routes);
+app.use('/transactions', routes);
 
 /**
  * Conexão ao Banco de Dados
