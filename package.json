@@ -19,8 +19,7 @@
   "type": "module",
   "scripts": {
     "server": "nodemon index.js",
-    "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "start": "node index.js"
   },
   "engines": {
     "node": "14.4.0"
