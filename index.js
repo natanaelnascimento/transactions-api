@@ -29,7 +29,7 @@ app.get('/', (_, response) => {
   logger.info('/');
   response.send({
     message:
-      'Bem-vindo à API de lançamentos. Acesse /transactions e siga as orientações',
+      'Bem-vindo à API de lançamentos. Acesse transactions-app-nsn.herokuapp.com e siga as orientações',
   });
 });
 
